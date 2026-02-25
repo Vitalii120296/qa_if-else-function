@@ -30,14 +30,14 @@ describe('ifElse', () => {
 
     expect(conditionTrue).toHaveBeenCalledTimes(1);
     expect(first).toHaveBeenCalledTimes(1);
-    expect(second).not.toHaveBeenCalledTimes;
+    expect(second).not.toHaveBeenCalled();
   });
 
   it('should pass first fuction if condition is false', () => {
     ifElse(conditionFalse, first, second);
 
     expect(conditionFalse).toHaveBeenCalledTimes(1);
-    expect(first).not.toHaveBeenCalledTimes;
+    expect(first).not.toHaveBeenCalled();
     expect(second).toHaveBeenCalledTimes(1);
   });
 });
